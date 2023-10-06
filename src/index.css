@@ -1,0 +1,154 @@
+body {
+  background-color: #F5F7FB;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h3 {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  background-color: #F5F7FB;
+  min-height: 100vh;
+  min-width: 400px;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #DBDEF0; /* ? */
+  background: url(images/blue_blob.png) left bottom no-repeat, 
+              url(images/yellow_blob.png) right top no-repeat;
+  background-size: 25%;
+}
+
+/* INTRO */
+.intro {
+  margin-top: 20vh;
+  text-align: center;
+  color: #293264;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+/*change name*/
+.quiz-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+.quiz-settings label {
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.quiz-settings select {
+  padding: 0.4em;
+}
+
+
+/* BUTTONS */
+.quiz-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  margin: 1em auto;
+  padding: 1.2em 2em;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  
+}
+
+.start-btn{
+  font-size: 1rem;
+  padding: 1.2em 4em;
+}
+
+/* QUIZ + QUESTION */
+.quiz {
+  display: flex;
+  flex-direction: column;
+}
+
+.questions {
+  margin-top: 0.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #DBDEF0;
+}
+
+.questions h3 {
+  margin-top: 0.5em;
+}
+
+fieldset {
+  padding: 0.5em;
+  border: none;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  justify-content: space-between;
+}
+
+.answers label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #293264;
+  border: 1px solid #293264;
+  border-radius: 8px;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+}
+
+.answers .correct {
+  background-color: #94D7A2;
+  border: none;
+}
+
+.answers .incorrect {
+  background-color: #F8BCBC;
+  border: none;
+  opacity: 0.5;
+}
+
+.answers .not-chosen {
+  border: 1px solid #4D5B9E;
+  opacity: 0.5;
+}
+
+input:checked + label {
+  background-color: #D6DBF5;
+  border: 1px solid transparent;
+}
+
+input[type="radio"]{
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.missing-answer {
+  color: #F51313;
+  margin-bottom: 0.3em;
+}
+
+.score {
+  margin-bottom: 0.3em;
+}
